@@ -1,4 +1,4 @@
-export function getColor(calories){
+export function getBadgeColor(calories){
     if(calories<400){
         return 'badge-green';
     }else if (calories >= 400 && calories <=800){

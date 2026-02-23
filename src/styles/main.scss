@@ -1,3 +1,18 @@
-#recipe-grid{
+#recipe-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); // Grille dynamique
+    gap: 20px;
+    padding: 20px;
 }
+
+.recipe-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: white;
+    
+    img { width: 100%; height: 200px; object-fit: cover; }
+    .card-info { padding: 15px; }
+}
+
+.hidden { display: none; } // Bach l-loader y-ghber mlli n-gollou lih
