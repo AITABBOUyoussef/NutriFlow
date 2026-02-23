@@ -1,6 +1,7 @@
 import { getAllRecipes } from "./api/recipeProvider.js";
 import { getColor, calculateTotalCalories } from './services/calorieService.js';
 import { showLoader, hideLoader }  from "./ui/loader.js";
+import { renderRecipes } from './ui/render.js';
 async function init() {
     //  console.log("NutriFlow lancée ");
 try {
@@ -14,7 +15,7 @@ try {
 }finally{
     hideLoader();
 }
-
+renderRecipes(recipes);
 }   
 init();
 
