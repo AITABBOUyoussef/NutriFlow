@@ -8,6 +8,11 @@ export function getColor(calories){
     }
 }
 
-export function calculateTotalCalories(favoriteRecipes){
-    return favoriteRecipes.reduce((total, recipe) => total + recipe.caloriesParServind,0 );
+
+export function calculateTotalCalories(favoriteRecipes) {
+    return favoriteRecipes.reduce((total, recipe) => {
+       
+        const calories = recipe.caloriesPerServing || 0; 
+        return total + calories;
+    }, 0);
 }
