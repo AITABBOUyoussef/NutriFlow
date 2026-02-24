@@ -1,13 +1,9 @@
 import { getBadgeColor } from '../services/calorieService.js';
-
-/**
- * US1 : Afficher la grille des recettes.
- * @param {Array} recipes - Le tableau des recettes venant de l'API.
- */
+ 
 export function renderRecipes(recipes) {
     const grid = document.getElementById('recipe-grid');
     
-    // N-khwiw l-grid qbel ma n-zido l-khidma (bach ma y-t-3awduch)
+    //   N-khwiw l-grid qbel ma n-zido l-khidma (bach ma y-t-3awduch)
     grid.innerHTML = "";
 
     recipes.forEach(recipe => {
