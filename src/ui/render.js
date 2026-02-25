@@ -1,33 +1,62 @@
 import { getBadgeColor } from '../services/calorieService.js';
  
+// export function renderRecipes(recipes) {
+//     const grid = document.getElementById('recipe-grid');
+    
+    
+//     grid.innerHTML = "";
+
+//     recipes.forEach(recipe => {
+       
+//         const badgeClass = getBadgeColor(recipe.caloriesPerServing);
+
+       
+//         const cardHTML = `
+//             <article class="recipe-card" data-id="${recipe.id}">
+//                 <div class="card-image">
+//                     <img src="${recipe.image}" alt="${recipe.name}">
+//                     <span class="nutri-badge ${badgeClass}">${recipe.caloriesPerServing} kcal</span>
+//                 </div>
+//                 <div class="card-info">
+//                     <h3>${recipe.name}</h3>
+//                     <div class="card-meta">
+//                         <span>⭐ ${recipe.rating}</span>
+//                         <span>${recipe.cuisine}</span>
+//                     </div>
+//                     <button class="btn-favorite">❤️</button>
+//                 </div>
+//             </article>
+//         `;
+
+//         grid.innerHTML += cardHTML;
+//     });
+// }
+
+// src/ui/render.js
+// import { getBadgeColor } from '../services/calorieService.js';
+
 export function renderRecipes(recipes) {
     const grid = document.getElementById('recipe-grid');
-    
-    //   N-khwiw l-grid qbel ma n-zido l-khidma (bach ma y-t-3awduch)
     grid.innerHTML = "";
 
     recipes.forEach(recipe => {
-        // N-jib s-smya dyal l-class dyal l-badge (US4)
         const badgeClass = getBadgeColor(recipe.caloriesPerServing);
 
-        // N-sawbo l-HTML dyal l-card (kif f s-sketch dyalk)
         const cardHTML = `
             <article class="recipe-card" data-id="${recipe.id}">
-                <div class="card-image">
+                <div class="card-image-container">
                     <img src="${recipe.image}" alt="${recipe.name}">
-                    <span class="nutri-badge ${badgeClass}">${recipe.caloriesPerServing} kcal</span>
+                    <button class="btn-favorite-icon">🤍</button>
+                    <span class="calorie-tag ${badgeClass}">⚡ ${recipe.caloriesPerServing} kcal</span>
                 </div>
-                <div class="card-info">
+                <div class="card-content">
                     <h3>${recipe.name}</h3>
-                    <div class="card-meta">
-                        <span>⭐ ${recipe.rating}</span>
-                        <span>${recipe.cuisine}</span>
+                    <div class="card-footer">
+                        <span class="rating">⭐ ${recipe.rating} <small>(${recipe.reviewCount || 0})</small></span>
                     </div>
-                    <button class="btn-favorite">❤️</button>
                 </div>
             </article>
         `;
-
         grid.innerHTML += cardHTML;
     });
 }
