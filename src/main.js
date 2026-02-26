@@ -16,7 +16,7 @@ async function init() {
    
 }   
 function setupFilters(recipes){
-    const searchBar = document.getElementById('.search-bar');
+    const searchBar = document.getElementById('search-bar');
     const chips = document.querySelectorAll('.chip');
 
     searchBar.addEventListener('input', (e)=> {
@@ -26,7 +26,10 @@ function setupFilters(recipes){
         );
         renderRecipes(filtered);
     });
-    chips.addEventListener('click' , ()=> {
+    chips.forEach(chip=>{
+
+   
+    chip.addEventListener('click' , ()=> {
         document.querySelector('.chip.active').classList.remove('active');
         chip.classList.add('active');
         const category = chip.textContent;
@@ -39,5 +42,6 @@ function setupFilters(recipes){
                 renderRecipes(filtered);
         }
     });
+     });
 }
 init();
