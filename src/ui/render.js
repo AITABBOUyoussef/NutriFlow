@@ -1,39 +1,5 @@
 import { getBadgeColor } from '../services/calorieService.js';
  
-// export function renderRecipes(recipes) {
-//     const grid = document.getElementById('recipe-grid');
-    
-    
-//     grid.innerHTML = "";
-
-//     recipes.forEach(recipe => {
-       
-//         const badgeClass = getBadgeColor(recipe.caloriesPerServing);
-
-       
-//         const cardHTML = `
-//             <article class="recipe-card" data-id="${recipe.id}">
-//                 <div class="card-image">
-//                     <img src="${recipe.image}" alt="${recipe.name}">
-//                     <span class="nutri-badge ${badgeClass}">${recipe.caloriesPerServing} kcal</span>
-//                 </div>
-//                 <div class="card-info">
-//                     <h3>${recipe.name}</h3>
-//                     <div class="card-meta">
-//                         <span>⭐ ${recipe.rating}</span>
-//                         <span>${recipe.cuisine}</span>
-//                     </div>
-//                     <button class="btn-favorite">❤️</button>
-//                 </div>
-//             </article>
-//         `;
-
-//         grid.innerHTML += cardHTML;
-//     });
-// }
-
-// src/ui/render.js
-// import { getBadgeColor } from '../services/calorieService.js';
 
 export function renderRecipes(recipes) {
     const grid = document.getElementById('recipe-grid');
