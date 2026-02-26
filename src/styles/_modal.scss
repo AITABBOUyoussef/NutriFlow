@@ -1,0 +1,52 @@
+.categories-filter {
+    display: flex;
+    gap: 14px;
+    margin-left: 14px;
+    .All{
+        border-radius: 20px;
+        border: none;
+        width: 50px;
+        height: 30px;
+       
+         &:hover{background-color: aquamarine;}
+    }
+   
+    .Breakfast{
+          border-radius: 20px;
+        border: none;
+        width: max-content;
+        height: 30px;
+       
+         &:hover{background-color: aquamarine;}
+    }
+    .Dessert{ 
+         border-radius: 20px;
+        border: none;
+        width: 60px;
+        height: 30px;
+        
+         &:hover{background-color: aquamarine;}
+        }
+        .Appetizers{
+              border-radius: 20px;
+        border: none;
+        width: max-content;
+        height: 30px;
+       
+         &:hover{background-color: aquamarine;}
+        }
+
+}
+
+.bottom-nav{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom:10px;
+    .nav-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
