@@ -1,6 +1,6 @@
 import { getAllRecipes } from "./api/recipeProvider.js";
 import { showLoader, hideLoader }  from "./ui/loader.js";
-import { renderRecipes } from './ui/render.js';
+import { renderRecipes , renderRecipeDetail } from './ui/render.js';
 
 async function init() {
     try {
@@ -43,5 +43,22 @@ function setupFilters(recipes){
         }
     });
      });
+     const grid = document.getElementById('recipe-grid');
+
+    // Event Delegation: كنسمعو للكليك في الـ grid كامل
+    grid.addEventListener('click', (e) => {
+        // 1. مالي يورك على See More
+        if (e.target.classList.contains('btn-see')) {
+            console.log("aaaaaaaaa")
+            const id = parseInt(e.target.getAttribute('data-id'));
+            const recipe = recipes.find(r => r.id === id);
+            renderRecipeDetail(recipe);
+        }
+
+        // 2. مالي يورك على زر Back
+        if (e.target.id === 'btn-back') {
+            renderRecipes(recipes); // كنرجعو للستة كاملة
+        }
+    });
 }
 init();
