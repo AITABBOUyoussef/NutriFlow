@@ -31,13 +31,20 @@ export function renderRecipes(recipes) {
 
 export function renderRecipeDetail(recipe) {
     const grid = document.getElementById('recipe-grid');
-    grid.innerHTML = ""; // كنخويو الـ grid باش نبينو غير هاد الوصفة
-
+    grid.innerHTML = ""; 
+    const grid1 = document.getElementById('recipe-grid1');
+    grid1.innerHTML = ""; 
     const detailHTML = `
+      <article class="recipe-card1" ">
         <div class="recipe-detail-view">
             <button id="btn-back" class="btn-back">⬅️ Back</button>
             <div class="detail-header">
                 <img src="${recipe.image}" alt="${recipe.name}">
+                <div class="bar-detail">
+            <div class="cuisine">"${recipe.cuisine}"</div>
+            <div class="prepTimeMinutes">⏱️"${recipe.prepTimeMinutes}"</div>
+            <div class="difficulty">"${recipe.difficulty}"</div>
+           </div>
                 <h2>${recipe.name}</h2>
             </div>
             
@@ -45,7 +52,7 @@ export function renderRecipeDetail(recipe) {
                 <div class="section">
                     <h3>Ingredients (${recipe.ingredients.length})</h3>
                     <ul>
-                        ${recipe.ingredients.map(ing => `<li>✅ ${ing}</li>`).join('')}
+                        ${recipe.ingredients.map(ing => `<li> ${ing}</li>`).join('')}
                     </ul>
                 </div>
 
@@ -57,6 +64,7 @@ export function renderRecipeDetail(recipe) {
                 </div>
             </div>
         </div>
+          </article>
     `;
-    grid.innerHTML = detailHTML;
+    grid1.innerHTML = detailHTML;
 }
