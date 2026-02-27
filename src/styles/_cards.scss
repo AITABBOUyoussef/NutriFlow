@@ -1,0 +1,57 @@
+#recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // 2 كارتات بـ كارتة
+  gap: 15px;
+  padding: 15px;
+  padding-bottom: 80px; // باش ما تجيش الكارطة لاصقة في الـ Nav
+}
+
+.recipe-card {
+  background: $card-white;
+  border-radius: $border-radius-card;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+
+  &:nth-child(even) {
+    margin-top: $staggered-offset;
+  }
+
+  .card-image-container {
+    position: relative;
+    height: 180px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+ .btn-favorite-icon {
+            position: absolute;
+            top: 10px; right: 10px;
+            background: rgba(255,255,255,0.8);
+            border: none; border-radius: 50%;
+            width: 30px; height: 30px;
+        }
+    .calorie-tag {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      font-weight: bold;
+      color: white;
+
+      &.badge-green { background: $primary-green; }
+      &.badge-orange { background: $orange-tag; }
+      &.badge-red { background: $red-tag; }
+    }
+  }
+
+  .card-content {
+    padding: 12px;
+    h3 { font-size: 0.9rem; margin-bottom: 5px; color: $text-dark; }
+    .rating { font-size: 0.8rem; color: $orange-tag; font-weight: bold; }
+  }
+}
