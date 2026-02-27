@@ -1,8 +1,6 @@
 
-// 1. الألوان والقياسات أولا
 @import 'variables';
 
-// 2. الستيل الأساسي
 body {
   background-color: $bg-body;
   font-family: "Inter", sans-serif;
@@ -15,10 +13,9 @@ header {
   p { color: #666; font-size: 0.9rem; }
 }
 
-// 3. الأجزاء ديال الـ UI
 @import 'cards';
 @import 'modal';
 @import 'responsive';
 
-// 4. الـ Utility (بحال الـ Hidden)
+/
 .hidden { display: none; }

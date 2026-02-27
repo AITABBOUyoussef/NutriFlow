@@ -2,8 +2,11 @@
 import { getBadgeColor } from '../services/calorieService.js';
 
 export function renderRecipes(recipes) {
+    
     const grid = document.getElementById('recipe-grid');
     grid.innerHTML = "";
+     const grid1 = document.getElementById('recipe-grid1');
+    grid1.innerHTML = ""; 
 
     recipes.forEach(recipe => {
         const badgeClass = getBadgeColor(recipe.caloriesPerServing); //

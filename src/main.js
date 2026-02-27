@@ -55,6 +55,7 @@ function setupFilters(recipes){
 
     grid2.addEventListener('click', (e) => {
         if (e.target.id === 'btn-back') {
+            
             renderRecipes(recipes); 
           }
     });
