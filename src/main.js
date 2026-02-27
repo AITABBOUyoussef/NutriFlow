@@ -37,7 +37,7 @@ function setupFilters(recipes){
             renderRecipes(recipes);
         } else {
             const filtered = recipes.filter(r => 
-                    r.mealType.includes(category) // DummyJSON عندها mealType كـ Array
+                    r.mealType.includes(category) // ba9i mafhmtha
                 );
                 renderRecipes(filtered);
         }
