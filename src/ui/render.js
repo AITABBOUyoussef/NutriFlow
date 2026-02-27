@@ -1,4 +1,4 @@
-// src/ui/render.js
+
 import { getBadgeColor } from '../services/calorieService.js';
 
 export function renderRecipes(recipes) {
@@ -9,9 +9,9 @@ export function renderRecipes(recipes) {
     grid1.innerHTML = ""; 
 
     recipes.forEach(recipe => {
-        const badgeClass = getBadgeColor(recipe.caloriesPerServing); //
+        const badgeClass = getBadgeColor(recipe.caloriesPerServing); 
 
-        // زِدنا class "btn-see" و data-id باش نعرفو آينا وصفة تكليركات
+      
         const cardHTML = `
             <article class="recipe-card" data-id="${recipe.id}">
                 <div class="card-image-container">

@@ -1,9 +1,9 @@
 #recipe-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); // 2 كارتات بـ كارتة
+  grid-template-columns: repeat(2, 1fr); 
   gap: 15px;
   padding: 15px;
-  padding-bottom: 80px; // باش ما تجيش الكارطة لاصقة في الـ Nav
+  padding-bottom: 80px; 
 }
 
 .recipe-card {
